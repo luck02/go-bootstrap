@@ -1,0 +1,13 @@
+---
+version: '3'
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - "./:/go/src/github.com/luck02/go-bootstrap"
+    command: ["sleep", "infinity"]
+    working_dir: "/go/src/github.com/luck02/go-bootstrap"
+    env_file:
+      - .env
